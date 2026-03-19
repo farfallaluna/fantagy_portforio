@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ja" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>farfalla_LUNA Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+JP:wght@200;300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="h-full font-zen">
+<!-- Navigation -->
+<nav id="nav" class="nav">
+  <div class="nav-container">
+    <button class="nav-logo" aria-label="ホームへ戻る">
+      <svg width="32" height="32" viewBox="0 0 60 60" class="logo-icon">
+        <path d="M30 30 Q15 15 10 25 Q5 35 15 40 Q25 45 30 30" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.1)" />
+        <path d="M30 30 Q45 15 50 25 Q55 35 45 40 Q35 45 30 30" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.1)" />
+        <line x1="30" y1="20" x2="30" y2="50" stroke="#d4af37" stroke-width="1.5" />
+      </svg>
+      <span class="logo-text">farfalla_LUNA</span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="nav-menu-desktop">
+      <a href="#hero-name" class="nav-link active" data-section="hero">Home</a>
+      <a href="#skills-heading" class="nav-link" data-section="skills">Skills</a>
+      <a href="#works-heading" class="nav-link" data-section="works">Works</a>
+      <a href="#contact-heading" class="nav-link" data-section="contact">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="nav-toggle" aria-label="メニューを開く">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line class="line1" x1="3" y1="6" x2="21" y2="6" />
+        <line class="line2" x1="3" y1="12" x2="21" y2="12" />
+        <line class="line3" x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-content">
+    <a href="#hero-name" class="mobile-link" data-section="hero">Home</a>
+    <a href="#about" class="mobile-link" data-section="about">About</a>
+    <a href="#skills-heading" class="mobile-link" data-section="skills">Skills</a>
+    <a href="#works-heading" class="mobile-link" data-section="works">Works</a>
+    <a href="#contact-heading" class="mobile-link" data-section="contact">Contact</a>
+  </div>
+</div>
+
+<div id="app-wrapper" class="w-full h-full overflow-auto" style="background: linear-gradient(180deg, #0a0f1a 0%, #0d1929 30%, #132238 60%, #0a0f1a 100%);">
+
+  <!-- ⭐ Stars Background -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none" style="z-index: 1;">
+    <svg class="star absolute" style="top: 10%; left: 15%; animation-delay: 0s;" width="4" height="4" viewbox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill="#c0c0c0" />
+    </svg>
+    <svg class="star absolute" style="top: 20%; left: 80%; animation-delay: 1s;" width="3" height="3" viewbox="0 0 3 3"><circle cx="1.5" cy="1.5" r="1" fill="#d4af37" />
+    </svg>
+    <svg class="star absolute" style="top: 35%; left: 25%; animation-delay: 2s;" width="2" height="2" viewbox="0 0 2 2"><circle cx="1" cy="1" r="0.8" fill="#c0c0c0" />
+    </svg>
+    <svg class="star absolute" style="top: 50%; left: 90%; animation-delay: 0.5s;" width="4" height="4" viewbox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill="#c0c0c0" />
+    </svg>
+    <svg class="star absolute" style="top: 65%; left: 10%; animation-delay: 1.5s;" width="3" height="3" viewbox="0 0 3 3"><circle cx="1.5" cy="1.5" r="1" fill="#d4af37" />
+    </svg>
+    <svg class="star absolute" style="top: 75%; left: 70%; animation-delay: 2.5s;" width="2" height="2" viewbox="0 0 2 2"><circle cx="1" cy="1" r="0.8" fill="#c0c0c0" />
+    </svg>
+    <svg class="star absolute" style="top: 85%; left: 45%; animation-delay: 0.8s;" width="3" height="3" viewbox="0 0 3 3"><circle cx="1.5" cy="1.5" r="1" fill="#c0c0c0" />
+    </svg>
+  </div>
+
+  <!-- 🦋 Butterflies -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none" style="z-index: 2;">
+    <svg class="butterfly absolute glow-gold" style="top: 15%; right: 10%;" width="60" height="60" viewbox="0 0 60 60"><g fill="none" stroke="#d4af37" stroke-width="1">
+      <path d="M30 30 Q15 15 10 25 Q5 35 15 40 Q25 45 30 30" fill="rgba(212,175,55,0.1)" />
+      <path d="M30 30 Q45 15 50 25 Q55 35 45 40 Q35 45 30 30" fill="rgba(212,175,55,0.1)" />
+      <path d="M30 30 Q20 35 18 45 Q16 52 25 50 Q30 48 30 30" fill="rgba(212,175,55,0.05)" />
+      <path d="M30 30 Q40 35 42 45 Q44 52 35 50 Q30 48 30 30" fill="rgba(212,175,55,0.05)" />
+      <line x1="30" y1="20" x2="30" y2="55" stroke-width="1.5" />
+     </g>
+    </svg>
+    <svg class="butterfly-delayed absolute glow-silver" style="top: 60%; left: 5%;" width="45" height="45" viewbox="0 0 60 60"><g fill="none" stroke="#c0c0c0" stroke-width="1">
+      <path d="M30 30 Q15 15 10 25 Q5 35 15 40 Q25 45 30 30" fill="rgba(192,192,192,0.1)" />
+      <path d="M30 30 Q45 15 50 25 Q55 35 45 40 Q35 45 30 30" fill="rgba(192,192,192,0.1)" />
+      <path d="M30 30 Q20 35 18 45 Q16 52 25 50 Q30 48 30 30" fill="rgba(192,192,192,0.05)" />
+      <path d="M30 30 Q40 35 42 45 Q44 52 35 50 Q30 48 30 30" fill="rgba(192,192,192,0.05)" />
+      <line x1="30" y1="20" x2="30" y2="55" stroke-width="1.5" />
+     </g>
+    </svg>
+   </div>
+
+<!-- Main Content -->
+<div class="relative" style="z-index: 10;">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center px-6 py-20 scroll-section">
+   <div class="text-center max-w-4xl mx-auto">
+
+  <!-- Moon Icon -->
+<div class="mb-12 fade-in-up opacity-0">
+  <svg width="80" height="80" viewbox="0 0 80 80" class="mx-auto glow-silver"><defs>
+    <lineargradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+     <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:0.8" />
+     <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0.4" />
+    </lineargradient>
+   </defs> <circle cx="40" cy="40" r="30" fill="url(#moonGrad)" opacity="0.3" /> <path d="M55 40 A25 25 0 1 1 40 15 A20 20 0 0 0 55 40" fill="url(#moonGrad)" />
+  </svg>
+ </div>
+  <!-- ============================= -->
+  <!--   ここからメインコンテンツ   -->
+  <!-- ============================= -->
+
+  <div class="relative" style="z-index: 10;">
+
+    <!-- Hero Section -->
+   <h1 id="hero-name" class="font-cormorant text-5xl md:text-7xl font-light tracking-wider mb-4 fade-in-up opacity-0 delay-100" style="color: #e8e8e8;">farfalla_LUNA</h1><!-- Title -->
+   <p id="hero-title" class="font-zen text-lg md:text-xl tracking-widest mb-2 fade-in-up opacity-0 delay-200" style="color: #d4af37;">境界クリエイター</p><!-- Subtitle -->
+   <p id="hero-subtitle" class="font-noto text-sm md:text-base tracking-wide mb-16 fade-in-up opacity-0 delay-300" style="color: #8899aa;">感情とデザインの翻訳者</p><!-- Decorative Line -->
+   <div class="w-px h-20 mx-auto mb-12 line-breathe fade-in-up opacity-0 delay-400" style="background: linear-gradient(180deg, transparent, #d4af37, transparent);"></div><!-- Intro Text -->
+   <p id="hero-intro" class="font-zen text-xl md:text-2xl font-light tracking-wide fade-in-up opacity-0 delay-500" style="color: #c0c0c0;">言葉にならない感情を、かたちに。</p><!-- Scroll Indicator -->
+   <div class="mt-20 fade-in-up opacity-0 delay-600">
+    <svg width="24" height="40" viewbox="0 0 24 40" class="mx-auto animate-bounce" style="color: #4a6a8a;"><rect x="7" y="1" width="10" height="18" rx="5" stroke="currentColor" stroke-width="1.5" fill="none" /> <circle cx="12" cy="8" r="2" fill="currentColor" />
+    </svg>
+   </div>
+  </div>
+ </section>
+    <!-- Skills Section -->
+    <section class="min-h-screen px-6 py-24 scroll-section">
+      <div class="max-w-5xl mx-auto">
+       <div class="text-center mb-20">
+        <h2 id="skills-heading" class="font-cormorant text-4xl md:text-5xl font-light tracking-widest gradient-text mb-4">Skills</h2>
+        <div class="w-24 h-px mx-auto" style="background: linear-gradient(90deg, transparent, #d4af37, transparent);"></div>
+       </div>
+       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Skill Card 1 -->
+        <div class="card-hover p-8 rounded-lg border" style="background: rgba(30, 58, 95, 0.2); border-color: rgba(212, 175, 55, 0.2);">
+         <div class="mb-6">
+          <svg width="40" height="40" viewbox="0 0 40 40" class="glow-gold"><rect x="4" y="8" width="32" height="24" rx="2" stroke="#d4af37" stroke-width="1.5" fill="none" /> <line x1="4" y1="14" x2="36" y2="14" stroke="#d4af37" stroke-width="1" /> <circle cx="8" cy="11" r="1.5" fill="#d4af37" /> <circle cx="13" cy="11" r="1.5" fill="#c0c0c0" />
+          </svg>
+         </div>
+         <h3 class="font-zen text-lg mb-3" style="color: #e8e8e8;">Webデザイン</h3>
+         <p class="font-noto text-sm leading-relaxed" style="color: #8899aa;">Canvaを使ったLP・簡易サイト制作。<br>
+          余白と静けさを大切にした設計。</p>
+        </div><!-- Skill Card 2 -->
+        <div class="card-hover p-8 rounded-lg border" style="background: rgba(30, 58, 95, 0.2); border-color: rgba(192, 192, 192, 0.2);">
+         <div class="mb-6">
+          <svg width="40" height="40" viewbox="0 0 40 40" class="glow-silver"><circle cx="20" cy="20" r="14" stroke="#c0c0c0" stroke-width="1.5" fill="none" /> <path d="M20 8 L20 20 L28 26" stroke="#c0c0c0" stroke-width="1.5" fill="none" stroke-linecap="round" />
+          </svg>
+         </div>
+         <h3 class="font-zen text-lg mb-3" style="color: #e8e8e8;">世界観設計</h3>
+         <p class="font-noto text-sm leading-relaxed" style="color: #8899aa;">色・余白・トーンの統一。<br>
+          ブランドの空気感を丁寧に紡ぐ。</p>
+        </div><!-- Skill Card 3 -->
+        <div class="card-hover p-8 rounded-lg border" style="background: rgba(30, 58, 95, 0.2); border-color: rgba(212, 175, 55, 0.2);">
+         <div class="mb-6">
+          <svg width="40" height="40" viewbox="0 0 40 40" class="glow-gold"><rect x="6" y="6" width="28" height="28" rx="4" stroke="#d4af37" stroke-width="1.5" fill="none" /> <circle cx="14" cy="14" r="3" stroke="#d4af37" stroke-width="1" fill="none" /> <path d="M6 28 L14 20 L22 26 L34 14" stroke="#d4af37" stroke-width="1.5" fill="none" />
+          </svg>
+         </div>
+         <h3 class="font-zen text-lg mb-3" style="color: #e8e8e8;">SNSビジュアル</h3>
+         <p class="font-noto text-sm leading-relaxed" style="color: #8899aa;">投稿画像・バナー制作。<br>
+          一目で世界観が伝わるデザイン。</p>
+        </div><!-- Skill Card 4 -->
+        <div class="card-hover p-8 rounded-lg border" style="background: rgba(30, 58, 95, 0.2); border-color: rgba(192, 192, 192, 0.2);">
+         <div class="mb-6">
+          <svg width="40" height="40" viewbox="0 0 40 40" class="glow-silver"><path d="M20 6 Q10 12 10 20 Q10 30 20 34 Q30 30 30 20 Q30 12 20 6" stroke="#c0c0c0" stroke-width="1.5" fill="none" /> <path d="M15 18 Q20 14 25 18" stroke="#c0c0c0" stroke-width="1" fill="none" /> <circle cx="20" cy="24" r="4" stroke="#c0c0c0" stroke-width="1" fill="none" />
+          </svg>
+         </div>
+         <h3 class="font-zen text-lg mb-3" style="color: #e8e8e8;">イラスト制作</h3>
+         <p class="font-noto text-sm leading-relaxed" style="color: #8899aa;">感情表現・抽象的モチーフ。<br>
+          蝶・月・心の揺らぎを描く。</p>
+        </div><!-- Skill Card 5 -->
+        <div class="card-hover p-8 rounded-lg border md:col-span-2 lg:col-span-1" style="background: rgba(30, 58, 95, 0.2); border-color: rgba(212, 175, 55, 0.2);">
+         <div class="mb-6">
+          <svg width="40" height="40" viewbox="0 0 40 40" class="glow-gold"><path d="M8 10 L8 30 M8 10 L20 10 Q26 10 26 16 Q26 22 20 22 L8 22" stroke="#d4af37" stroke-width="1.5" fill="none" /> <line x1="32" y1="10" x2="32" y2="30" stroke="#c0c0c0" stroke-width="1.5" /> <line x1="28" y1="10" x2="36" y2="10" stroke="#c0c0c0" stroke-width="1" /> <line x1="28" y1="30" x2="36" y2="30" stroke="#c0c0c0" stroke-width="1" />
+          </svg>
+         </div>
+         <h3 class="font-zen text-lg mb-3" style="color: #e8e8e8;">文章×デザイン</h3>
+         <p class="font-noto text-sm leading-relaxed" style="color: #8899aa;">note・プロフィール設計。<br>
+          言葉とビジュアルが対話する構成。</p>
+        </div>
+       </div>
+      </div>
+     </section>
+
+   <!-- Works Section -->
+   <section class="min-h-screen px-6 py-24 scroll-section">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-20">
+      <h2 id="works-heading" class="font-cormorant text-4xl md:text-5xl font-light tracking-widest gradient-text mb-4">Works</h2>
+      <div class="w-24 h-px mx-auto" style="background: linear-gradient(90deg, transparent, #c0c0c0, transparent);"></div>
+     </div>
+     <div class="grid md:grid-cols-2 gap-10">
+      
+      <!-- Work Item 1 -->
+      <div class="card-hover group cursor-pointer" onclick="showPage('web')">
+       <div class="aspect-video rounded-lg overflow-hidden mb-6 relative" style="background: linear-gradient(135deg, #1e3a5f 0%, #0d1929 100%);">
+        <div class="absolute inset-0 flex items-center justify-center">
+         <svg width="120" height="80" viewbox="0 0 120 80"><rect x="10" y="10" width="100" height="60" rx="4" stroke="#d4af37" stroke-width="1" fill="none" opacity="0.5" /> <rect x="20" y="20" width="35" height="8" rx="2" fill="#d4af37" opacity="0.3" /> <rect x="20" y="35" width="80" height="4" rx="1" fill="#c0c0c0" opacity="0.2" /> <rect x="20" y="45" width="60" height="4" rx="1" fill="#c0c0c0" opacity="0.2" /> <rect x="20" y="55" width="40" height="8" rx="2" fill="#d4af37" opacity="0.4" />
+         </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+       </div>
+       <h3 id="web_title" class="font-zen text-lg mb-2" style="color: #e8e8e8;">Webサイト制作</h3>
+       <p class="font-noto text-sm" style="color: #8899aa;">Canvaで制作したLP・簡易サイト</p>
+       <div id="Pricing"></div>
+       <div id="testimonials"></div>
+       <div id="process"></div>
+       <div id="faq"></div>
+      </div><!-- Work Item 2 -->
+      <div class="card-hover group cursor-pointer" onclick="showPage('sns')">
+       <div class="aspect-video rounded-lg overflow-hidden mb-6 relative" style="background: linear-gradient(135deg, #132238 0%, #1e3a5f 100%);">
+        <div class="absolute inset-0 flex items-center justify-center">
+         <svg width="100" height="100" viewbox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="8" stroke="#c0c0c0" stroke-width="1" fill="none" opacity="0.5" /> <circle cx="50" cy="40" r="15" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.1)" /> <rect x="25" y="65" width="50" height="4" rx="2" fill="#c0c0c0" opacity="0.3" /> <rect x="35" y="75" width="30" height="3" rx="1" fill="#c0c0c0" opacity="0.2" />
+         </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+       </div>
+       <h3 id="sns_title" class="font-zen text-lg mb-2" style="color: #e8e8e8;">SNSデザイン</h3>
+       <p class="font-noto text-sm" style="color: #8899aa;">Instagram投稿・サムネイル</p>
+       <div id="Pricing"></div>
+       <div id="testimonials"></div>
+       <div id="process"></div>
+       <div id="faq"></div>
+      </div><!-- Work Item 3 -->
+      <div class="card-hover group cursor-pointer" onclick="showPage('illust')">
+       <div class="aspect-video rounded-lg overflow-hidden mb-6 relative" style="background: linear-gradient(135deg, #0d1929 0%, #1e3a5f 100%);">
+        <div class="absolute inset-0 flex items-center justify-center">
+         <svg width="100" height="100" viewbox="0 0 100 100" class="glow-gold"><g fill="none" stroke="#d4af37" stroke-width="1">
+           <path d="M50 50 Q30 25 20 40 Q10 55 25 65 Q40 75 50 50" fill="rgba(212,175,55,0.1)" />
+           <path d="M50 50 Q70 25 80 40 Q90 55 75 65 Q60 75 50 50" fill="rgba(212,175,55,0.1)" />
+           <line x1="50" y1="35" x2="50" y2="80" stroke-width="1.5" />
+           <circle cx="50" cy="30" r="8" stroke="#c0c0c0" fill="rgba(192,192,192,0.1)" />
+          </g>
+         </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+       </div>
+       <h3 id="illust_title" class="font-zen text-lg mb-2" style="color: #e8e8e8;">イラストレーション</h3>
+       <p class="font-noto text-sm" style="color: #8899aa;">蝶・月・感情モチーフ</p>
+       <div id="Pricing"></div>
+       <div id="testimonials"></div>
+       <div id="process"></div>
+       <div id="faq"></div>
+      </div><!-- Work Item 4 -->
+      <div class="card-hover group cursor-pointer" onclick="showPage('vision')">
+       <div class="aspect-video rounded-lg overflow-hidden mb-6 relative" style="background: linear-gradient(135deg, #1e3a5f 0%, #0a0f1a 100%);">
+        <div class="absolute inset-0 flex items-center justify-center">
+         <svg width="120" height="80" viewbox="0 0 120 80"><circle cx="30" cy="40" r="20" stroke="#d4af37" stroke-width="1" fill="none" opacity="0.4" /> <circle cx="30" cy="40" r="12" stroke="#c0c0c0" stroke-width="1" fill="none" opacity="0.3" /> <rect x="60" y="20" width="50" height="6" rx="2" fill="#d4af37" opacity="0.4" /> <rect x="60" y="32" width="40" height="4" rx="1" fill="#c0c0c0" opacity="0.2" /> <rect x="60" y="42" width="45" height="4" rx="1" fill="#c0c0c0" opacity="0.2" /> <rect x="60" y="52" width="35" height="4" rx="1" fill="#c0c0c0" opacity="0.2" />
+         </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+       </div>
+       <h3 id="vision_title" class="font-zen text-lg mb-2" style="color: #e8e8e8;">世界観デザイン</h3>
+       <p class="font-noto text-sm" style="color: #8899aa;">ビジュアルコンセプト設計</p>
+      </div>
+      <div id="Pricing"></div>
+       <div id="testimonials"></div>
+       <div id="process"></div>
+       <div id="faq"></div>
+     </div>
+    </div>
+   </section>
+
+    <!-- Contact Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 py-24 scroll-section">
+      <div class="max-w-2xl mx-auto text-center">
+       <div class="mb-16">
+        <svg width="60" height="60" viewbox="0 0 60 60" class="mx-auto mb-8 glow-gold"><path d="M30 30 Q15 15 10 25 Q5 35 15 40 Q25 45 30 30" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.1)" /> <path d="M30 30 Q45 15 50 25 Q55 35 45 40 Q35 45 30 30" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.1)" /> <line x1="30" y1="20" x2="30" y2="50" stroke="#d4af37" stroke-width="1.5" />
+        </svg>
+       </div>
+       <h2 id="contact-heading" class="font-cormorant text-4xl md:text-5xl font-light tracking-widest gradient-text mb-6">Contact</h2>
+       <div class="w-24 h-px mx-auto mb-12" style="background: linear-gradient(90deg, transparent, #d4af37, transparent);"></div>
+       <p class="font-zen text-lg mb-4" style="color: #c0c0c0;">お問合わせ・ご依頼はこちらから</p>
+       <p class="font-noto text-sm mb-12" style="color: #8899aa;">心を込めて、あなたの想いをかたちにします。</p>
+       <!-- SNS Links -->
+<div class="flex flex-col gap-4 mb-12 items-center">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/far_fallaluna"
+       target="_blank"
+       class="group flex items-center gap-3 transition-all duration-300 hover:scale-105">
+  
+      <svg width="18" height="18" viewBox="0 0 24 24"
+           class="glow-gold opacity-70 group-hover:opacity-100 transition">
+        <rect x="3" y="3" width="18" height="18" rx="5"
+              stroke="#d4af37" stroke-width="1.2" fill="none"/>
+        <circle cx="12" cy="12" r="4"
+                stroke="#d4af37" stroke-width="1.2" fill="none"/>
+        <circle cx="17" cy="7" r="1.2" fill="#d4af37"/>
+      </svg>
+  
+      <span class="font-noto text-sm tracking-wide"
+            style="color:#8899aa;">
+        Instagram → @far_fallaluna
+      </span>
+  
+    </a>
+  
+  
+    <!-- X -->
+    <a href="https://x.com/farfalla_lu_na"
+       target="_blank"
+       class="group flex items-center gap-3 transition-all duration-300 hover:scale-105">
+  
+      <svg width="18" height="18" viewBox="0 0 24 24"
+           class="glow-silver opacity-70 group-hover:opacity-100 transition">
+        <path d="M4 4 L20 20 M20 4 L4 20"
+              stroke="#c0c0c0" stroke-width="1.5"/>
+      </svg>
+  
+      <span class="font-noto text-sm tracking-wide"
+            style="color:#8899aa;">
+        X → @farfalla_lu_na
+      </span>
+  
+    </a>
+  
+  </div>
+  <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+    <!-- メールで相談ボタン -->
+    <a href="mailto:farfallaluna0804@gmail.com" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-3 px-8 py-4 rounded-full border transition-all duration-300 hover:scale-105"
+       style="border-color: #d4af37; color: #d4af37; background: rgba(192,192,192,0.05);">
+      <svg width="20" height="20" viewBox="0 0 20 20">
+        <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" />
+        <path d="M2 6 L10 11 L18 6" stroke="currentColor" stroke-width="1.5" fill="none" />
+      </svg>
+      <span class="font-zen text-sm tracking-wide">メールで相談</span>
+    </a>
+  
+    <!-- noteを見るボタン -->
+    <a href="https://note.com/farfalla_luna/n/n9138e97e487c" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-3 px-8 py-4 rounded-full border transition-all duration-300 hover:scale-105"
+       style="border-color: #d4af37; color: #d4af37; background: rgba(192,192,192,0.05);">
+      <svg width="20" height="20" viewBox="0 0 20 20">
+        <rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" />
+        <line x1="6" y1="6" x2="14" y2="6" stroke="currentColor" stroke-width="1" />
+        <line x1="6" y1="9" x2="14" y2="9" stroke="currentColor" stroke-width="1" />
+        <line x1="6" y1="12" x2="11" y2="12" stroke="currentColor" stroke-width="1" />
+      </svg>
+      <span class="font-zen text-sm tracking-wide">noteを見る</span>
+    </a>
+  </div>
+ </div>
+
+      </div>
+     </section>
+ 
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t" style="border-color: rgba(212,175,55,0.1);">
+      <p class="font-cormorant text-lg tracking-widest mb-2" style="color: #4a6a8a;">farfalla_LUNA</p>
+      <p class="font-noto text-xs" style="color: #3a5a7a;">© 2026 All rights reserved.</p>
+     </footer>
+    </div>
+   </div><!-- Modal Overlay -->
+   <div id="image-modal" class="modal-overlay">
+    <div class="modal-content"><button class="modal-close" onclick="closeImageModal()">
+      <svg width="20" height="20" viewbox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="15" y2="15" /> <line x1="15" y1="5" x2="5" y2="15" />
+      </svg></button> <img id="modal-image" class="modal-image">
+    </div>
+ 
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="image-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeImageModal()">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="5" y1="5" x2="15" y2="15"/>
+        <line x1="15" y1="5" x2="5" y2="15"/>
+      </svg>
+    </button>
+    <img id="modal-image" class="modal-image">
+  </div>
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
